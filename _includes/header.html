@@ -1,0 +1,19 @@
+<header role="banner">
+  <a href="{{ "/" | relative_url}}">
+    <img src="{{ "/assets/images/logo-transparent.png" | relative_url }}" alt="{{ site.title | escape }}" class="center-block">
+  </a>
+  <nav role="navigation">
+    <ul>
+
+
+      {% assign sorted_pages = site.pages | sort:"order" %}
+      {% for node in sorted_pages %}
+        {% if node.title %}
+        <li>
+          <a href="{{ node.url | relative_url }}" {% if page.url == node.url %} class="active" {% endif %} >{{ node.title | escape }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
