@@ -1,7 +1,7 @@
 ---
 layout: about
 title: About Me
-
+text: true
 permalink: /
 order: 1
 sidebar: true
